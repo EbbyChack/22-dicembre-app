@@ -43,14 +43,14 @@ class CustomGallery extends Component {
             {this.state.isLoading ? (
               <div>
                 <p className="">Loading...</p>
-                <div class="spinner-grow text-start  mx-2" role="status" style={{width:'1em', height:'1em'}}>
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-start  mx-2" role="status" style={{width:'1em', height:'1em'}}>
+                  <span className="visually-hidden">Loading...</span>
                 </div>
-                <div class="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.2s'}}>
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.2s'}}>
+                  <span className="visually-hidden">Loading...</span>
                 </div>
-                <div class="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.4s'}}>
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.4s'}}>
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               </div>
             ) : (

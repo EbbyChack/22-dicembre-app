@@ -5,8 +5,10 @@
 body {
   background-color: black;
 }
-.navbar {
-  background-color: black !important;
+.hoverImg {
+  transition: transform 0.5s;
 }
-
+.hoverImg:hover {
+  transform: scale(1.1); 
+}
 

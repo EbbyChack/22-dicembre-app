@@ -60,8 +60,8 @@ class CustomGallery extends Component {
                     <img
                       src={movie.Poster}
                       alt={movie.Title}
-                      style={{ width: "80%", height: "14em", objectFit: "contain" }}
-                      className="p-1 "
+                      style={{ width: "80%", height: "14em", objectFit: "contain", cursor: "pointer" }}
+                      className="p-1 hoverImg"
                     />
                   </div>
                 </div>

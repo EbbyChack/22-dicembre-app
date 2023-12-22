@@ -3,7 +3,7 @@ import { Component } from "react";
 class MyNav extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-md navbar-dark bg-black">
         <div className="container-fluid">
           <a href="/">
             <img

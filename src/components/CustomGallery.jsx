@@ -3,6 +3,7 @@ import { Component } from "react";
 class CustomGallery extends Component {
   state = {
     movies: [],
+    isLoading: true,
   };
 
   async componentDidMount() {
@@ -23,6 +24,7 @@ class CustomGallery extends Component {
 
       this.setState({
         movies: movies,
+        isLoading: false,
       });
     } catch (error) {
       console.error("Error:", error);
@@ -38,13 +40,33 @@ class CustomGallery extends Component {
               <h5 className="text-start">{this.props.name}</h5>
             </div>
 
-            {this.state.movies.map((movie, index) => (
-              <div key={index} className="col-6 col-md-4 col-lg-2 px-1">
-                <div className="container-fluid p-0">
-                  <img src={movie.Poster} alt={movie.Title} style={{ width: "80%", height:"14em", objectFit:"contain" }} className="p-1 " />
+            {this.state.isLoading ? (
+              <div>
+                <p className="">Loading...</p>
+                <div class="spinner-grow text-start  mx-2" role="status" style={{width:'1em', height:'1em'}}>
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.2s'}}>
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow text-start mx-2 " role="status" style={{width:'1em', height:'1em', animationDelay:'0.4s'}}>
+                  <span class="visually-hidden">Loading...</span>
                 </div>
               </div>
-            ))}
+            ) : (
+              this.state.movies.map((movie, index) => (
+                <div key={index} className="col-6 col-md-4 col-lg-2 px-1">
+                  <div className="container-fluid p-0">
+                    <img
+                      src={movie.Poster}
+                      alt={movie.Title}
+                      style={{ width: "80%", height: "14em", objectFit: "contain" }}
+                      className="p-1 "
+                    />
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
